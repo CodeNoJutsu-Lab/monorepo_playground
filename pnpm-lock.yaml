@@ -63,6 +63,9 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      another-package:
+        specifier: workspace:*
+        version: link:../../packages/another-package
       custom-package:
         specifier: workspace:*
         version: link:../../packages/custom-package
@@ -97,6 +100,12 @@ importers:
       typescript:
         specifier: 7.0.2
         version: 7.0.2
+
+  packages/another-package:
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/custom-package:
     devDependencies:
