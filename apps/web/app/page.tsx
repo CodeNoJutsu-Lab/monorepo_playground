@@ -1,6 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import { turborepo } from "custom-package";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -64,7 +65,7 @@ export default function Home() {
           </a>
         </div>
         <Button appName="web" className={styles.secondary}>
-          Open alert
+          {turborepo}
         </Button>
       </main>
       <footer className={styles.footer}>

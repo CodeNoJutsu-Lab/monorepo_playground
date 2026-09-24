@@ -63,6 +63,9 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      custom-package:
+        specifier: workspace:*
+        version: link:../../packages/custom-package
       next:
         specifier: 16.3.4
         version: 16.3.4(@babel/core@8.0.1)(@types/node@26.4.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -94,6 +97,12 @@ importers:
       typescript:
         specifier: 7.0.2
         version: 7.0.2
+
+  packages/custom-package:
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/eslint-config:
     devDependencies:
